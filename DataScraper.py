@@ -31,7 +31,7 @@ class Scrape():
         #data['Event'] = data['Event'].astype(str)
         #data['Date'] = pd.to_datetime(data['Date'])
 
-        # convert team names to number
+        # convert team names to number (could be done with a loop instead xD )
         data.loc[data.Opponent == 'Liquid', 'Opponent'] = 1
         data.loc[data.Opponent == 'Natus Vincere', 'Opponent'] = 2
         data.loc[data.Opponent == 'Vega Squadron', 'Opponent'] = 3
@@ -105,6 +105,18 @@ class Scrape():
         data.loc[data.Opponent == 'NewStyle', 'Opponent'] = 71
         data.loc[data.Opponent == 'sAw', 'Opponent'] = 72
         data.loc[data.Opponent == 'E-frag.net', 'Opponent'] = 73
+        data.loc[data.Opponent == 'dd', 'Opponent'] = 74
+
+        # TODO: convert maps to a number
+        data.loc[data.Map == 'Inferno', 'Map'] = 1
+        data.loc[data.Map == 'Nuke', 'Map'] = 2
+        data.loc[data.Map == 'Mirage', 'Map'] = 3
+        data.loc[data.Map == 'Train', 'Map'] = 4
+        data.loc[data.Map == 'Overpass', 'Map'] = 5
+        data.loc[data.Map == 'Dust2', 'Map'] = 6
+        data.loc[data.Map == 'Cache', 'Map'] = 7
+        data.loc[data.Map == 'Vertigo', 'Map'] = 8
+        data.loc[data.Map == 'Cobblestone', 'Map'] = 9
 
         print(data)
         # Print resultant dataframe of all merged together top 10 team historic match results

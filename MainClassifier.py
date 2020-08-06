@@ -45,8 +45,8 @@ if __name__ == "__main__":
     X_train, X_validation, Y_train, Y_validation = train_test_split(X, y.ravel(), test_size=0.20, random_state=1, shuffle=True)
 
     # training and testing sets
-    print(X_train,Y_train, "training data")
-    print(X_validation, Y_validation, "testing data")
+    #print(X_train,Y_train, "training data")
+    #print(X_validation, Y_validation, "testing data")
 
     # initialize different models to test which one works the best
     models = []
